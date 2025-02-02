@@ -15,6 +15,7 @@
   --color-secondary: #234894;
   --color-secondary-light: #afcedd;
   --color-body: #696969;
+  --color-gray: #eee;
   --color-white: #ffffff;
   --color-black: #1e1e1e;
   --raduis-sm: 6px;
@@ -25,7 +26,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: var(--color-body);
 }
@@ -42,11 +43,16 @@ h2 {
 }
 h3 {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+a {
+  color: var(--color-secondary);
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   body {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   h1 {
     font-size: 2.2rem;
@@ -57,5 +63,100 @@ h3 {
   h3 {
     font-size: 1.6rem;
   }
+  a {
+    font-size: 1.6rem;
+  }
 }
-/* Button */
+/* Buttons and Badges*/
+.btn {
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border-radius: var(--raduis-md);
+  margin: 1rem 0;
+  white-space: nowrap;
+}
+.badge {
+  display: inline-block;
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary);
+  font-weight: 900;
+  font-size: 1.6rem;
+  padding: 1rem 1.5rem;
+  margin-left: 1rem;
+  border-radius: var(--raduis-sm);
+}
+.btn--primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.6rem;
+  }
+  .badge {
+    font-size: 1.8rem;
+  }
+}
+/* Container and Block*/
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.block {
+  padding: 2rem;
+}
+/* Requests */
+.requests {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  column-gap: 2rem;
+}
+.request {
+  background-color: var(--color-gray);
+  padding: 1rem;
+  border-radius: var(--raduis-md);
+}
+.request__uploads {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.request__info {
+  margin-bottom: 1.5rem;
+}
+.request__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.request__profile .profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.request__profile .profile > figure {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--raduis-md);
+  overflow: hidden;
+}
+.request__profile img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .requests {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .requests {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

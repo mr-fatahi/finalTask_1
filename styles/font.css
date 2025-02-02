@@ -69,3 +69,8 @@
   font-style: normal;
   font-display: swap;
 }
+
+body,
+button{
+  font-family: "Vazirmatn";
+}
