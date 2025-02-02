@@ -1,0 +1,61 @@
+@import url('./font.css');
+/* Resets */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+/* Root Variables */
+:root {
+  --color-primary: #219f95;
+  --color-secondary: #234894;
+  --color-secondary-light: #afcedd;
+  --color-body: #696969;
+  --color-white: #ffffff;
+  --color-black: #1e1e1e;
+  --raduis-sm: 6px;
+  --raduis-md: 8px;
+}
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-body);
+}
+h1,
+h2 {
+  color: var(--color-black);
+  font-weight: 900;
+}
+h1 {
+  font-size: 1.8rem;
+}
+h2 {
+  font-size: 1.4rem;
+}
+h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
+}
+/* Button */
